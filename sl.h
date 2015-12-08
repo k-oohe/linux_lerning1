@@ -9,7 +9,7 @@
 
 #define D51HIGHT	10
 #define D51FUNNEL	 7
-#define D51LENGTH	83
+#define D51LENGTH	172
 #define D51PATTERNS	 6
 
 
@@ -103,6 +103,146 @@
 #define LCAR6  "   (O)        (O)    "
 
 #define DELLN  "                     "
+#define PASSLENGTH 88
+ 
+#define PASS01 "          _____  _____  _____  _____  _____  _____  _____  _____  _____  _____          "
+#define PASS02 " _________|___|__|___|__|___|__|___|__|___|__|___|__|___|__|___|__|___|__|___|_________ "
+#define PASS03 "  | ____  _____  _____  _____  _____  _____  _____  _____  _____  _____  _____  ____ |  "
+#define PASS04 "  | |  |  |   |  |   |  |   |  |   |  |   |  |   |  |   |  |   |  |   |  |   |  |  | |  "
+#define PASS05 "  | |  |  |___|  |___|  |___|  |___|  |___|  |___|  |___|  |___|  |___|  |___|  |  | |  "
+#define PASS06 "  | |  |                                                                        |  | |  "
+#define PASS07 "  | |  |                                   @@                                   |  | |  "
+#define PASS08 "__|_|__|________________________________________________________________________|__|_|__"
+#define PASS09 "\\==|_/_\\____/_\\_|  |______|Z          +--|_________________|------+    |_/_\\____/_\\_|==/"
+#define PASS10 "     \\_/    \\_/                                       +++~~              \\_/    \\_/     "
+
+#define PASSDEL "                                                                                        "
+ 
+#define LPASSLENGTH 88
+ 
+#define LPASS01 "          _____  _____  _____  _____  _____  _____  _____  _____  _____  _____           "
+#define LPASS02 " _________|___|__|___|__|___|__|___|__|___|__|___|__|___|__|___|__|___|__|___|________   "
+#define LPASS03 "  | ____  _____  _____  _____  _____  _____  _____  _____  _____  _____  ____   _____|   "
+#define LPASS04 "  | |  |  |   |  |   |  |   |  |   |  |   |  |   |  |   |  |   |  |   |  |  |   |   |    "
+#define LPASS05 "  | |  |  |___|  |___|  |___|  |___|  |___|  |___|  |___|  |___|  |___|  |  |   |   |    "
+#define LPASS06 "  | |  |                                                                 |  |   |___|    "
+#define LPASS07 "  | |  |                                   @@                            |  |   |_|_|    "
+#define LPASS08 "__|_|__|_________________________________________________________________|__|___|_|_|___ "
+#define LPASS09 "\\==|_/_\\____/_\\_|  |______|XX                    +-|_______|------+    |_/_\\____/_\\_|==/ "
+#define LPASS10 "     \\_/    \\_/                                                          \\_/    \\_/      "
+
+#define LPASSDEL "                                                                                         "
+
+#define CROS001 ""
+#define CROS002 ""
+#define CROS003 "-_||_-"
+#define CROS004  "_><_"
+#define CROS005 "- || -"
+#define CROS006   "||"
+#define CROS007   "||"
+#define CROS008   "||"
+#define CROS009   "||"
+#define CROS010 "\\&||~"
+
+static int cros0l[] = {0, 0, 0, 1, 0, 2, 2, 2, 2, 0};
+ 
+#define CROS101 " |                  "
+#define CROS102 " |                  "
+#define CROS103 " |                  "
+#define CROS104 " |                  "
+#define CROS105 " |                  "
+#define CROS106 " |                  "
+#define CROS107 " |                  "
+#define CROS108 " |                  "
+#define CROS109 "_|_                 "
+#define CROS110 "|||                 "
+
+#define CROS201 "          /         "
+#define CROS202 "         /          "
+#define CROS203 "        /           "
+#define CROS204 "       /            "
+#define CROS205 "      /             "
+#define CROS206 "     /              "
+#define CROS207 "    /               "
+#define CROS208 "   /                "
+#define CROS209 "__/                 "
+#define CROS210 "|/|                 "
+ 
+#define CROS301 "                    "
+#define CROS302 "                    "
+#define CROS303 "                    "
+#define CROS304 "                    "
+#define CROS305 "                    "
+#define CROS306 "                    "
+#define CROS307 "                    "
+#define CROS308 "                    "
+#define CROS309 "___"
+#define CROS310 "|-+-----------------"
+ 
+/*#define PASSNUM 5*/
+/*#define ALL_LENGTH (D51LENGTH + (PASSLENGTH * (PASSNUM - 1)) + LPASSLENGTH)*/
+
+static char *cros0[D51HIGHT]
+= {CROS001, CROS002, CROS003, CROS004, CROS005,
+    CROS006, CROS007, CROS008, CROS009, CROS010};
+static char *cros1[D51HIGHT]
+= {CROS101, CROS102, CROS103, CROS104, CROS105,
+   CROS106, CROS107, CROS108, CROS109, CROS110};
+static char *cros2[D51HIGHT]
+= {CROS201, CROS202, CROS203, CROS204, CROS205,
+   CROS206, CROS207, CROS208, CROS209, CROS210};
+static char *cros3[D51HIGHT]
+= {CROS301, CROS302, CROS303, CROS304, CROS305,
+   CROS306, CROS307, CROS308, CROS309, CROS310};
+
+static char *sl[LOGOPATTERNS][LOGOHIGHT + 1]
+= {{LOGO1, LOGO2, LOGO3, LOGO4, LWHL11, LWHL12, DELLN},
+   {LOGO1, LOGO2, LOGO3, LOGO4, LWHL21, LWHL22, DELLN},
+   {LOGO1, LOGO2, LOGO3, LOGO4, LWHL31, LWHL32, DELLN},
+   {LOGO1, LOGO2, LOGO3, LOGO4, LWHL41, LWHL42, DELLN},
+   {LOGO1, LOGO2, LOGO3, LOGO4, LWHL51, LWHL52, DELLN},
+   {LOGO1, LOGO2, LOGO3, LOGO4, LWHL61, LWHL62, DELLN}};
+static char *lcoal[LOGOHIGHT + 1]
+= {LCOAL1, LCOAL2, LCOAL3, LCOAL4, LCOAL5, LCOAL6, DELLN};
+static char *car[LOGOHIGHT + 1]
+= {LCAR1, LCAR2, LCAR3, LCAR4, LCAR5, LCAR6, DELLN};
+
+static char *d51[D51PATTERNS][D51HIGHT + 1]
+= {{D51STR1, D51STR2, D51STR3, D51STR4, D51STR5, D51STR6, D51STR7,
+    D51WHL11, D51WHL12, D51WHL13, D51DEL},
+   {D51STR1, D51STR2, D51STR3, D51STR4, D51STR5, D51STR6, D51STR7,
+    D51WHL21, D51WHL22, D51WHL23, D51DEL},
+   {D51STR1, D51STR2, D51STR3, D51STR4, D51STR5, D51STR6, D51STR7,
+    D51WHL31, D51WHL32, D51WHL33, D51DEL},
+   {D51STR1, D51STR2, D51STR3, D51STR4, D51STR5, D51STR6, D51STR7,
+    D51WHL41, D51WHL42, D51WHL43, D51DEL},
+   {D51STR1, D51STR2, D51STR3, D51STR4, D51STR5, D51STR6, D51STR7,
+    D51WHL51, D51WHL52, D51WHL53, D51DEL},
+   {D51STR1, D51STR2, D51STR3, D51STR4, D51STR5, D51STR6, D51STR7,
+    D51WHL61, D51WHL62, D51WHL63, D51DEL}};
+static char *coal[D51HIGHT + 1]
+= {COAL01, COAL02, COAL03, COAL04, COAL05,
+   COAL06, COAL07, COAL08, COAL09, COAL10, COALDEL};
+static char *coach[D51HIGHT + 1]
+= {PASS01, PASS02, PASS03, PASS04, PASS05,
+   PASS06, PASS07, PASS08, PASS09, PASS10, PASSDEL};
+static char *lcoach[D51HIGHT + 1]
+= {LPASS01, LPASS02, LPASS03, LPASS04, LPASS05,
+   LPASS06, LPASS07, LPASS08, LPASS09, LPASS10, LPASSDEL};
+
+static char *d51_r[D51PATTERNS][D51HIGHT + 1]
+= {{D51STR1, D51STR2, D51STR3, D51STR4, D51STR5, D51STR6, D51STR7,
+    D51WHL11, D51WHL12, D51WHL13, D51DEL},
+   {D51STR1, D51STR2, D51STR3, D51STR4, D51STR5, D51STR6, D51STR7,
+    D51WHL61, D51WHL62, D51WHL63, D51DEL},
+   {D51STR1, D51STR2, D51STR3, D51STR4, D51STR5, D51STR6, D51STR7,
+    D51WHL51, D51WHL52, D51WHL53, D51DEL},
+   {D51STR1, D51STR2, D51STR3, D51STR4, D51STR5, D51STR6, D51STR7,
+    D51WHL41, D51WHL42, D51WHL43, D51DEL},
+   {D51STR1, D51STR2, D51STR3, D51STR4, D51STR5, D51STR6, D51STR7,
+    D51WHL31, D51WHL32, D51WHL33, D51DEL},
+   {D51STR1, D51STR2, D51STR3, D51STR4, D51STR5, D51STR6, D51STR7,
+    D51WHL21, D51WHL22, D51WHL23, D51DEL}};
 
 #define C51HIGHT 11
 #define C51FUNNEL 7
