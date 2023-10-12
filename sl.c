@@ -69,7 +69,7 @@ int C51       = 0;
 int PASSNUM = 5;
 int ALL_LENGTH = 0;
 int DIREC = RTOL;
-int WAIT_TIME = 20000;
+int WAIT_TIME = 10000;
 
 int my_mvaddstr(int y, int x, char *str)
 {
